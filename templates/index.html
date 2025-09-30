@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narendra Chaudhari - Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Narendra Chaudhari</a>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#profiles" class="nav-link">Profiles</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="https://drive.google.com/file/d/1yroN-pF3sC2ILS5k8tWtCrnDcOjgCtPW/view?usp=sharing" class="btn btn-primary nav-resume" target="_blank" rel="noopener">Resume</a>
+                <span class="nav-underline"></span>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="flash-message flash-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Parallax Gradient Blobs Background -->
+    <div class="bg-blobs" aria-hidden="true">
+        <span></span><span></span><span></span>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Hi, I'm <span class="highlight">Narendra Chaudhari</span></h1>
+                <p class="hero-subtitle">AI Intern • Python Developer</p>
+                <p class="hero-description">
+                    Motivated and adaptable developer exploring AI/ML and full‑stack projects.
+                    Open to roles where I can learn fast, take on challenges, and deliver impact.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    <a href="https://drive.google.com/file/d/1yroN-pF3sC2ILS5k8tWtCrnDcOjgCtPW/view?usp=sharing" class="btn btn-primary btn-glow resume-cta" target="_blank" rel="noopener">Download Resume</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profiles Section -->
+    <section id="profiles" class="profiles">
+        <div class="container">
+            <h2 class="section-title">Profiles</h2>
+            <div class="projects-grid">
+                <a class="project-card neon-border tilt" href="https://github.com/Narendra-0017" target="_blank" rel="noopener" style="text-decoration:none;">
+                    <div class="project-image">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>GitHub</h3>
+                        <p>Explore my repositories, experiments, and open‑source work.</p>
+                        <div class="project-links">
+                            <span class="project-link">github.com/Narendra-0017</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="project-card neon-border tilt" href="https://www.linkedin.com/in/narendra1chaudhari" target="_blank" rel="noopener" style="text-decoration:none;">
+                    <div class="project-image">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>LinkedIn</h3>
+                        <p>Connect with me professionally and view my experiences.</p>
+                        <div class="project-links">
+                            <span class="project-link">linkedin.com/in/narendra1chaudhari</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Final‑year B.E. in Information Technology student at Government
+                        Engineering College Modasa (CGPA 7.65/10). Currently an AI Intern at
+                        Infosys Springboard, contributing to computer‑vision and document
+                        forensics research and implementation.
+                    </p>
+                    <p>
+                        I enjoy building practical solutions with Python, Flask, JavaScript, and
+                        AI/ML. Strong communicator and collaborator, always keen to learn and
+                        ship meaningful results.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>2</h3>
+                            <p>Featured Projects</p>
+                        </div>
+                        <div class="stat">
+                            <h3>2022–26</h3>
+                            <p>IT Undergraduate</p>
+                        </div>
+                        <div class="stat">
+                            <h3>4+</h3>
+                            <p>Internships/Certs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid reveal">
+                <div class="skill-category neon-border">
+                    <h3>Languages</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">C</span>
+                        <span class="skill-item">C++</span>
+                        <span class="skill-item">Java</span>
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">Solidity</span>
+                    </div>
+                </div>
+                <div class="skill-category neon-border">
+                    <h3>Technologies</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">React.js</span>
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">Flask</span>
+                        <span class="skill-item">SQL</span>
+                        <span class="skill-item">MongoDB</span>
+                        <span class="skill-item">Firebase</span>
+                        <span class="skill-item">AWS</span>
+                        <span class="skill-item">Blockchain</span>
+                        <span class="skill-item">AI/ML</span>
+                        <span class="skill-item">Postman</span>
+                        <span class="skill-item">Android Studio</span>
+                        <span class="skill-item">Git & GitHub</span>
+                    </div>
+                </div>
+                <div class="skill-category neon-border">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Team Collaboration</span>
+                        <span class="skill-item">Communication (English)</span>
+                        <span class="skill-item">Problem Solving</span>
+                        <span class="skill-item">Leadership</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card neon-border tilt reveal">
+                    <div class="project-image">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI TraceFinder</h3>
+                        <p>AI‑based forensic system to identify the source scanner of a document by
+                           analyzing device‑specific artifacts. Includes authentication and
+                           tamper‑detection to ensure document integrity.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>AI/ML</span>
+                            <span>Computer Vision</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Narendra-0017/AI_TraceFinder-Narendra" class="project-link" target="_blank" rel="noopener">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card neon-border tilt reveal">
+                    <div class="project-image">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Service Request Portal</h3>
+                        <p>Platform for users to raise service requests (plumber, electrician, etc.)
+                           with form submission, email alerts, and role‑based access for users and
+                           providers.</p>
+                        <div class="project-tech">
+                            <span>Flask</span>
+                            <span>SQL</span>
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://service-request-portal.onrender.com/" class="project-link" target="_blank" rel="noopener">Live Demo</a>
+                            <a href="https://github.com/Narendra-0017/service-request-portal" class="project-link" target="_blank" rel="noopener">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info reveal">
+                    <h3>Let's work together!</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Feel free to reach out!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>narendrachaudhari05@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9265130989</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Gandhinagar, Gujarat</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/Narendra-0017" class="social-link" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/narendra1chaudhari" class="social-link" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <form class="contact-form reveal" method="POST" action="{{ url_for('contact') }}">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Narendra Chaudhari. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // Smooth scrolling for internal hash links only
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+
+        // Auto-hide flash messages
+        setTimeout(() => {
+            const flashMessages = document.querySelectorAll('.flash-message');
+            flashMessages.forEach(message => {
+                message.style.opacity = '0';
+                setTimeout(() => message.remove(), 300);
+            });
+        }, 5000);
+
+        // Magnetic nav underline
+        const underline = document.querySelector('.nav-underline');
+        const links = document.querySelectorAll('.nav-menu .nav-link');
+        function moveUnderline(el) {
+            const rect = el.getBoundingClientRect();
+            const parentRect = el.parentElement.getBoundingClientRect();
+            underline.style.width = rect.width + 'px';
+            underline.style.transform = `translateX(${rect.left - parentRect.left}px)`;
+        }
+        links.forEach(link => {
+            link.addEventListener('mouseenter', () => moveUnderline(link));
+        });
+        if (links[0]) moveUnderline(links[0]);
+
+        // Card hover tilt
+        document.querySelectorAll('.tilt').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const rotateX = ((y / rect.height) - 0.5) * -10;
+                const rotateY = ((x / rect.width) - 0.5) * 10;
+                card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg)';
+            });
+        });
+
+        // Scroll reveal
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // No JS override for resume links; anchors are hardcoded
+    </script>
+</body>
+</html>
